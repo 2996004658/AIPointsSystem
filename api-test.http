@@ -1,0 +1,15 @@
+# Spring Boot User Points System - API Test Collection
+
+## 测试文件说明
+将以下内容保存为 `api-test.http` 文件，使用 IntelliJ IDEA 或 VS Code 的 REST Client 插件进行测试
+
+---
+
+
+###
+
+### 注意事项
+# 1. 先执行注册接口
+# 2. 然后执行登录接口，复制返回的 token
+# 3. 将上面的 token 替换到功能接口的 Authorization header 中
+# 4. 依次调用功能1、功能2、功能3，观察控制台输出和积分变化
