@@ -18,6 +18,10 @@
           <el-icon><List /></el-icon>
           <span>Points History</span>
         </el-menu-item>
+        <el-menu-item index="/ai-templates">
+          <el-icon><Picture /></el-icon>
+          <span>AI模板管理</span>
+        </el-menu-item>
       </el-menu>
     </el-aside>
     <el-container>
@@ -36,7 +40,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import { User, List } from '@element-plus/icons-vue'
+import { User, List, Picture } from '@element-plus/icons-vue'
 
 const router = useRouter()
 

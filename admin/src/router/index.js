@@ -3,6 +3,7 @@ import Login from '../views/Login.vue'
 import Layout from '../views/Layout.vue'
 import UserList from '../views/UserList.vue'
 import PointsHistory from '../views/PointsHistory.vue'
+import AiTemplateList from '../views/AiTemplateList.vue'
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
                 path: 'history',
                 name: 'PointsHistory',
                 component: PointsHistory
+            },
+            {
+                path: 'ai-templates',
+                name: 'AiTemplateList',
+                component: AiTemplateList
             }
         ]
     }
