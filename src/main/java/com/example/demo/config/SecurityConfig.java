@@ -37,7 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors().and() // 启用 CORS
                 .authorizeRequests()
                 .antMatchers("/api/auth/**", "/api/admin/auth/**", "/h2-console/**").permitAll() // 允许公开访问的路径
+                .antMatchers("/api/ai-template/**").permitAll() // AI模板接口公开访问
                 .antMatchers("/api/admin/**").hasAuthority("ROLE_ADMIN") // 管理员接口需要 ADMIN 权限
+                .antMatchers("/api/upload/**").authenticated() // 上传接口需要认证
                 .anyRequest().authenticated() // 其他请求需要认证
                 .and()
                 .headers().frameOptions().disable() // 允许 H2 控制台使用 iframe

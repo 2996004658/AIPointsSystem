@@ -1,0 +1,25 @@
+### AI图片模板API测试
+
+### 1. 从GitHub导入数据
+POST http://localhost:8080/api/ai-template/import
+
+### 2. 重新导入数据（清空后重新导入）
+POST http://localhost:8080/api/ai-template/reimport
+
+### 3. 查询所有模板
+GET http://localhost:8080/api/ai-template/list
+
+### 4. 根据ID查询模板
+GET http://localhost:8080/api/ai-template/1
+
+### 5. 根据分类查询（例如：工作）
+GET http://localhost:8080/api/ai-template/category/工作
+
+### 6. 根据模式查询（generate或edit）
+GET http://localhost:8080/api/ai-template/mode/generate
+
+### 7. 搜索模板（根据标题关键词）
+GET http://localhost:8080/api/ai-template/search?keyword=PPT
+
+### 8. 获取统计信息
+GET http://localhost:8080/api/ai-template/stats

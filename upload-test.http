@@ -1,0 +1,21 @@
+### 阿里云OSS图片上传API测试
+
+### 1. 上传图片（需要登录）
+POST http://localhost:8080/api/upload/image
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="test.jpg"
+Content-Type: image/jpeg
+
+< ./test.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 2. 获取当前用户的上传记录（需要登录）
+GET http://localhost:8080/api/upload/records
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+### 3. 获取所有上传记录（管理员）
+GET http://localhost:8080/api/upload/records/all
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
